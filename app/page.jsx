@@ -3,7 +3,7 @@ import TicketCard from "./(components)/TicketCard";
 
 const GetAllTickets = async () => {
   try {
-    const res = await fetch("https://grand-rabanadas-d43900.netlify.app/api/Tickets", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Tickets`, {
       cache: "no-store"
     });
     return res.json();

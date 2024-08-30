@@ -1,9 +1,9 @@
 import TicketCard from "./(components)/TicketCard";
-import { NextURL } from "next/dist/server/web/next-url";
+
 
 const GetAllTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
+    const res = await fetch("https://grand-rabanadas-d43900.netlify.app/api/Tickets", {
       cache: "no-store"
     });
     return res.json();

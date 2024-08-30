@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const TicketForm = ({ ticket }) => {
   const router = useRouter();
@@ -51,6 +52,9 @@ const TicketForm = ({ ticket }) => {
     active: false,
     category: "Hardware problem"
   };
+
+  let path = usePathname()
+  console.log(path)
 
   if (EDITMODE) {
     statingTickeData = {

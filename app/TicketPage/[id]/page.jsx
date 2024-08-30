@@ -2,7 +2,7 @@ import TicketForm from "@/app/(components)/TicketForm";
 
 const getTicketById = async id => {
   try {
-    const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
+    const res = await fetch(`https://grand-rabanadas-d43900.netlify.app/api/Tickets/${id}`, {
       cache: "no-cache"
     });
     if (!res.ok) {
